@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class PerfectSquare {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter n1 and n2:");
+        int n1 = scanner.nextInt();
+        int n2 = scanner.nextInt();
+
+        if (n1 < 0 || n2 < 0) {
+            System.out.println("Impossible: Input should be non-negative.");
+        } else {
+            double sqrtN1 = Math.sqrt(n1);
+            double sqrtN2 = Math.sqrt(n2);
+
+            double decimalPartN1 = sqrtN1 - Math.floor(sqrtN1);
+            double decimalPartN2 = sqrtN2 - Math.floor(sqrtN2);
+
+            if (decimalPartN1 == 0 && decimalPartN2 == 0) {
+                System.out.println("Both square roots are perfect squares.");
+            } else {
+                System.out.println("Not both square roots are perfect squares.");
+            }
+               }
+
+             scanner.close();
+    }
+}
